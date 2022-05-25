@@ -1,4 +1,4 @@
-# ML Sensor
+# ML Sensors
 This repository contains resources related to ML Sensors, a new paradigm for edge devices which segregates the sensor input data and ML processing from the wider system at the hardware level while providing a thin interface that mimics traditional sensors in functionality.
 
 ## Datasheet
