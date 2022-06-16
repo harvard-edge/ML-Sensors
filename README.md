@@ -11,10 +11,14 @@ The markdown template is available [here](https://github.com/harvard-edge/ML-Sen
 
 If you use an ML Sensor Datasheet in a publication, please cite:
 ```
-@article{PLACEHOLDER,
-  title={},
-  author={},
-  journal={ArXiv},
-  year={2022}
+@misc{warden22MLSensors,
+  doi = {10.48550/ARXIV.2206.03266},
+  url = {https://arxiv.org/abs/2206.03266},
+  author = {Warden, Pete and Stewart, Matthew and Plancher, Brian and Banbury, Colby and Prakash, Shvetank and Chen, Emma and Asgar, Zain and Katti, Sachin and Reddi, Vijay Janapa},
+  keywords = {Machine Learning (cs.LG), Hardware Architecture (cs.AR), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Machine Learning Sensors},
+  publisher = {arXiv},
+  year = {2022},
+  copyright = {Creative Commons Attribution 4.0 International}
 }
 ```
