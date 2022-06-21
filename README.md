@@ -7,7 +7,7 @@ This section describes the process of creating a Datasheet for an ML Sensor.
 The markdown template is available [here](https://github.com/harvard-edge/ML-Sensor-Datasheet/blob/main/ML-Sensor-Datasheet-Template.md)
 
 ### Example Datasheet:
-![Example Datasheet](https://github.com/harvard-edge/ML-Sensor-Datasheet/blob/main/example-ML-Sensor-Datasheet.png)
+![Example Datasheet](https://github.com/harvard-edge/ML-Sensor-Datasheet/blob/main/example-ML-Sensor-Datasheet.png).
 
 If you use an ML Sensor Datasheet in a publication, please cite:
 ```
@@ -22,3 +22,5 @@ If you use an ML Sensor Datasheet in a publication, please cite:
   copyright = {Creative Commons Attribution 4.0 International}
 }
 ```
+
+To get involved, check out our [website](http://mlsensors.org) or join our [Google group](ml-sensors@googlegroups.com).
