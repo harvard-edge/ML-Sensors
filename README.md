@@ -23,4 +23,4 @@ If you use an ML Sensor Datasheet in a publication, please cite:
 }
 ```
 
-To get involved, check out our [website](http://mlsensors.org) or join our [Google group](http://ml-sensors@googlegroups.com).
+To get involved, check out our [website](http://mlsensors.org) or join our [Google group](mailto:ml-sensors@googlegroups.com).
