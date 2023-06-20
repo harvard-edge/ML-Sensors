@@ -16,6 +16,18 @@ The proposed structure of the ML sensor datasheet is shown below.
 
 A full example datasheet for a person detection ML sensor is provided [here](https://github.com/harvard-edge/ML-Sensors/blob/main/datasheet/person-detector-datasheet.pdf).
 
+If you use or reference an ML sensor datasheet in a publication, please cite:
+```
+@misc{stewart2023datasheets,
+      title={Datasheets for Machine Learning Sensors}, 
+      author={Matthew Stewart and Pete Warden and Yasmine Omri and Shvetank Prakash and Joao Santos and Shawn Hymel and Benjamin Brown and Jim MacArthur and Nat Jeffries and Brian Plancher and Vijay Janapa Reddi},
+      year={2023},
+      eprint={2306.08848},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
+
 If you use an ML sensor in a publication, please cite:
 ```
 @misc{warden22MLSensors,
