@@ -14,7 +14,7 @@ The proposed structure of the ML sensor datasheet is shown below.
 
 ![datasheet](https://github.com/harvard-edge/ML-Sensors/blob/main/figs/datasheet.png)
 
-A full example datasheet for a person detection ML sensor is provided [here](https://github.com/harvard-edge/ML-Sensors/blob/main/datasheet/person-detector-datasheet.pdf).
+A full example datasheet for a person detection ML sensor is provided [here](https://github.com/harvard-edge/ML-Sensors/blob/main/open_source_datasheet.pdf).
 
 If you use or reference an ML sensor datasheet in a publication, please cite:
 ```
