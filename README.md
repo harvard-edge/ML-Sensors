@@ -12,7 +12,7 @@ The items listed within the proposed datasheet include but are not limited to: e
 
 The proposed structure of the ML sensor datasheet is shown below.
 
-![datasheet](https://github.com/harvard-edge/ML-Sensors/blob/main/figs/datasheet.png)
+![datasheet](https://github.com/harvard-edge/ML-Sensors/blob/main/figs/datasheet_template.png)
 
 A full example datasheet for a person detection ML sensor is provided [here](https://github.com/harvard-edge/ML-Sensors/blob/main/open_source_datasheet.pdf).
 
