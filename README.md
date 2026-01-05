@@ -15,7 +15,7 @@ This repository is designed to support **Findable, Accessible, Interoperable, an
 **Contact:** <add-email-here>
 
 ## Quick start (use the template)
-1. Open the editable template: [`template/ml_sensor_datasheet_template.md`](./template/ml_sensor_datasheet_template.md)
+1. Open the editable template: [`ml_sensor_datasheet_template.md`](./ml_sensor_datasheet_template.md)
 2. Duplicate it and fill it in for your ML sensor.
 3. Export to PDF if desired (optional): `pandoc` or your preferred Markdown-to-PDF tool.
 4. Submit improvements via pull request. Please include a brief note describing the change and update the version history.
@@ -34,7 +34,7 @@ The template covers topics including (not limited to): environmental impact, com
 ## Template and example datasheets (reproducibility)
 To support reproducibility and adoption, this repository includes:
 - An **editable, empty template** (Markdown):  
-  [`template/ml_sensor_datasheet_template.md`](./template/ml_sensor_datasheet_template.md)
+  [`ml_sensor_datasheet_template.md`](./ml_sensor_datasheet_template.md)
 - Two **completed example datasheets** using the full template:
   - Open-source ML sensor datasheet (PDF):  
     [`open_source_datasheet_updated.pdf`](./open_source_datasheet_updated.pdf)
