@@ -1,264 +1,428 @@
-# ML Sensor Datasheet
-*(Editable Markdown template for documenting ML sensors)*
+# ML Sensor Datasheet Template
+*(Fillable Markdown template for documenting ML sensors as versioned, auditable, reusable components)*
 
-> This datasheet template follows the Findable, Accessible, Interoperable, and Reusable (FAIR) principles.  
-> **How to use:** Duplicate this file, fill in each section, and update the version history when you revise the sensor, firmware, model, or evaluation results.
+
+# Instructions for Use
+
+1. Clone or download this template.  
+
+2. Fill in all **[R] Required** fields and any **[C] Conditional** fields that apply.  
+
+3. Tie performance results to specific hardware, firmware, model, dataset, and configuration versions.  
+
+4. Submit updates via pull request so changes are reviewed and traceable.  
+
+5. Tag each release with a version number and update the change log.  
+
+
+---
+
+**Legend:**
+
+* **[R] Required** for a complete datasheet
+
+* **[O] Optional** but strongly recommended
+
+* **[C] Conditional** required depending on sensor and deployment
 
 ---
 
 ## Title Page
 
-**Sensor Name:**  
-**Short Description (1–2 sentences):**  
+**[R] Sensor Name:**  
 
-**Datasheet Version:**  
-**Release Date:**  
+**[R] Sensor Type and Function:** (example: person detection, gesture recognition, occupancy, fall detection)  
 
-**Authors / Maintainers:**  
-**Affiliation(s):**  
-**Contact Email:**  
+**[R] Intended Use:** (what it is designed to do)  
 
-**Repository URL:**  
-**License:**  
+**[R] Out of Scope or Non Intended Use:** (what it should not be used for)  
 
-**Related Paper / Citation:**  
-- Paper:  
-- BibTeX / DOI / URL:  
+**[R] Version:**  
 
-**Supported Hardware Variant(s):**  
-- SKU / Part number:  
-- Revision:  
+**[R] Release Date:**  
 
-**Supported Firmware / Software Version(s):**  
+**[R] Last Updated:**  
+
+**[R] Authors and Contributors:**  
+
+**[R] Affiliation(s):**  
+
+**[R] Maintainer:** (name or team responsible for updates)  
+
+**[R] Contact Email:**  
+
+**[R] Repository URL:**  
+
+**[O] Issue Tracker URL:**  
+
+**[R] License:**  
+
+**[O] Cite This Datasheet:** (preferred citation text or link to CITATION file)  
+
+**[R] Change Log:**
+
+| Version | Date | Changes | Evaluations Updated | Approved By |
+|--------|------|---------|--------------------|------------|
+| 1.0.0  |      |         |                    |            |
+|        |      |         |                    |            |
+
+**[R] Artifact and Build Provenance (tie results to versions):**  
+
+- Hardware revision:  
+
 - Firmware version:  
-- Driver version:  
-- On-device runtime version (if applicable):  
 
-**ML Model Identifier(s):**  
-- Model name:  
-- Model version / hash:  
-- Training code commit (optional):  
+- Model version or hash:  
 
-**Version History**
-| Version | Date | Changes | Updated By |
-|---|---|---|---|
-| 1.0.0 | YYYY-MM-DD | Initial release | Name |
-| 1.0.1 | YYYY-MM-DD | Example: updated firmware version and re-ran end-to-end eval | Name |
+- Training dataset version:  
+
+- Evaluation dataset version:  
+
+- Toolchain or runtime: (example: OS, framework version)  
+
+**[O] Reproducibility Notes:** (how to reproduce the evaluation results, links to scripts, configs)  
+
+> This datasheet follows the Findable, Accessible, Interoperable, and Reusable (FAIR) principles and is intended to be maintained as a versioned artifact.
 
 ---
 
 ## 1. Overview
 
-### 1.1 Intended Use and Scope
-**Primary use case(s):**  
-**Out of scope / non intended use:**  
-**Target deployment environments:** (indoor, outdoor, industrial, etc.)  
-**Stakeholders:** (device integrators, end-users, auditors, regulators, etc.)
+**[R] One Sentence Summary:**  
 
-### 1.2 Sensor Outputs and Interface
-**High-level outputs provided:** (e.g., person-present boolean, count, gesture label, confidence)  
-**Output semantics:** (what the outputs mean, units, thresholds)  
-**Update rate / sampling rate:**  
-**Latency expectations:**  
-**Confidence / uncertainty reporting:**  
+**[R] Description:**  
 
-### 1.3 Compliance and Certification
-**Which international regulations and industry standards does the device conform to?**  
-List applicable compliance regimes and standards. Include evidence and version scope.
+**[R] Key Features:**  
 
-- Data privacy regulations: (e.g., GDPR, etc.)  
-- RF / communications regulations: (e.g., FCC, etc.)  
-- Domain-specific regulations: (e.g., HIPAA, FDA, automotive safety, etc.)  
-- Voluntary standards / best practices: (e.g., ISO 26262, etc.)  
-- AI regulations (if relevant): (e.g., EU AI Act, etc.)  
+**[R] Primary Use Cases:**  
 
-**Certifications achieved:**  
-- Certification body:  
-- Certification name / ID:  
-- Date obtained:  
-- Scope (hardware/firmware/model versions covered):  
-- Link to certificate or public record (if available):  
+**[R] Out of Scope or Non Intended Use Cases:**  
 
-**Certification pathways (optional, future-facing):**  
-How could this datasheet support third-party assurance or certification over time?  
-- Re-certification triggers: (firmware update, model retraining, hardware revision)  
-- Evidence package: (what data and tests would be required)
+**[O] Stakeholders:** (developer, auditor, privacy officer, deployment operator, end user)  
+
+**[C] Compliance and Certifications:**  
+
+- Regulations and standards considered: (example: GDPR, FCC, ISO 27001, ISO 26262, HIPAA, EU AI Act)  
+
+- Certification pathways considered: (example: third party safety assurance, UL style certification, security audit)  
+
+- Current status: (not applicable, planned, in progress, certified)  
+
+- Evidence links:  
+
+**[R] Interface Summary (the sensor contract):**  
+
+- Input modality: (camera, microphone, IMU, radar, multimodal)  
+
+- Outputs exposed: (example: person present, gesture class, confidence, bounding box)  
+
+- Output update rate:  
+
+- Latency expectations:  
+
+- Output validity conditions: (example: within 0.5 to 5 meters, indoor lighting only)  
+
+- Tunable parameters exposed to users: (thresholds, smoothing, modes)  
+
+**[R] Operating Envelope (supported and tested ranges):**
+
+| Factor | Supported Range | Tested Range | Notes |
+|-------|------------------|-------------|------|
+| Lighting |  |  |  |
+| Distance |  |  |  |
+| Angle / FOV |  |  |  |
+| Motion / speed |  |  |  |
+| Occlusion |  |  |  |
+| Temperature |  |  |  |
+| Other |  |  |  |
+
+**[R] Safety, Misuse, and Harm Considerations:**  
+
+- Foreseeable misuse:  
+
+- Potential harms:  
+
+- Mitigations or guardrails:  
+
+- Human oversight expectations: (if any)  
 
 ---
 
-## 2. Model Characteristics
+## 2. System and Software Characteristics
 
-### 2.1 Software and Processing Flow
-**Software flow diagram:** (insert image or link)  
-**On-device pipeline summary:** (preprocessing, inference, postprocessing)  
-**Key dependencies:** (runtime, libraries, hardware acceleration)  
-**On-device resource usage:** (CPU/GPU/NPU, memory footprint)
+**[R] System Block Diagram or Software Flow Diagram:** (link or embedded image)  
 
-### 2.2 Dataset Nutrition Label
-**Training dataset(s):**  
-- Dataset name(s):  
-- Dataset version(s):  
-- Data collection time period:  
-- Data sources:  
-- Labeling process:  
-- Known limitations:  
+**[R] Pipeline Stages:** (sensing, preprocessing, inference, postprocessing, output interface)  
 
-**Evaluation dataset(s):**  
-- Dataset name(s):  
-- Dataset version(s):  
-- Data collection time period:  
-- Domain match to deployment: (high/medium/low)  
+**[C] On Device vs Cloud Components:** (what runs where)  
 
-**Data governance:**  
-- Consent and provenance:  
-- Privacy considerations:  
+**[R] Runtime Dependencies:** (frameworks, libraries, OS)  
+
+**[R] Update Mechanism:** (OTA, manual, none)  
+
+**[R] Versioning Policy:** (what changes require a new datasheet version)  
+
+**[R] Default Configuration (used for reported metrics):**  
+
+- Frame rate or sampling rate:  
+
+- Resolution or sampling parameters:  
+
+- Preprocessing settings: (crop, normalization, filtering)  
+
+- Confidence threshold:  
+
+- Postprocessing: (smoothing, tracking)  
+
+- Quantization mode: (if applicable)  
+
+**[O] Configurability:**  
+
+- Tunable parameters and recommended ranges:  
+
+- Tradeoffs: (accuracy vs latency vs power)  
+
+---
+
+## 3. Data and Model Characteristics
+
+### 3.1 Evaluation Data (for reported results)
+
+**[R] Evaluation Dataset Name and Version:**  
+
+**[R] Source and Access:** (public link, internal, restricted)  
+
+**[R] License and Usage Constraints:**  
+
+**[R] Ground Truth Method:** (human labeling, sensor fusion, annotation protocol)  
+
+**[R] Coverage Summary:** (conditions represented, demographics if applicable)  
+
+**[R] Known Limitations:**  
+
+### 3.2 Training Data (if different from evaluation data)
+
+**[C] Training Dataset Name and Version:**  
+
+**[C] Source and Access:**  
+
+**[C] License and Usage Constraints:**  
+
+**[C] Collection Context:** (where, when, how)  
+
+**[C] Labeling Process:**  
+
+**[C] Known Biases and Limitations:**  
+
+### 3.3 Model Documentation
+
+**[R] Model Task:**  
+
+**[R] Model Architecture and Size:** (high level description)  
+
+**[R] Model Version or Hash:**  
+
+**[C] Training Procedure Summary:** (if you trained it)  
+
+**[O] Compute Used for Training:** (if known)  
+
+**[R] Intended Use and Limitations:** (model card style short summary)  
+
+---
+
+## 4. Security and Privacy Labeling
+
+**[R] Data Handling Summary:**  
+
+- Does it capture potentially identifiable data: (yes, no, depends)  
+
+- Where processing occurs: (on device, cloud, hybrid)  
+
+- Data stored on device: (what, how long)  
+
+- Data transmitted off device: (what, when)  
+
 - Data retention policy:  
 
-**Bias and representativeness considerations:**  
-- Demographic coverage (if applicable):  
-- Known gaps:  
-- Mitigations:  
+- Consent and notice expectations: (where applicable)  
 
-### 2.3 IoT Security and Privacy Label
-**Threat model summary:**  
-**On-device data handling:** (stored? streamed? discarded?)  
-**Encryption:** (at rest, in transit)  
-**Authentication and authorization:**  
-**Access control:**  
-**Logging and audit trails:**  
-**Privacy safeguards:** (on-device processing, minimization, redaction, etc.)  
-**User controls:** (opt-out, data deletion, consent management)
+**[R] Security Controls:**  
 
-### 2.4 Machine Learning Model Specifications
-**Task:** (classification, detection, segmentation, etc.)  
-**Model architecture:**  
-**Input format:** (resolution, color space, sampling window)  
-**Output format:** (labels, bounding boxes, confidence scores)  
-**Training details:**  
-- Training procedure summary:  
-- Training compute (optional):  
-- Hyperparameters (optional):  
+- Encryption in transit:  
 
-**Model limitations:**  
-- Failure modes:  
-- Known edge cases:  
-- Adversarial considerations (if applicable):
+- Encryption at rest:  
 
-### 2.5 End-to-End Performance Analysis (Under Varying Conditions)
-**What does “end-to-end” include for this sensor?**  
-Define the full pipeline and versions covered.
+- Authentication and access control:  
 
-**Evaluation version scope:**  
+- Logging and audit trails:  
+
+**[R] Vulnerability Handling and Updates:**  
+
+- Security contact:  
+
+- Disclosure process:  
+
+- Patch mechanism and timelines:  
+
+- Supported lifetime:  
+
+**[O] IoT Security and Privacy Label:** (link or table if you maintain a standardized label)  
+
+---
+
+## 5. End to End Performance Characterization
+
+This section reports system level performance of the complete ML sensor as deployed. All results must be tied to the specific versions listed on the title page.
+
+**[R] Evaluation Setup:**  
+
 - Hardware revision:  
-- Firmware/software version:  
-- Model version:  
-- Evaluation date:  
 
-**Core metrics:**  
-- Accuracy / F1 / mAP / etc.:  
-- False positive rate:  
-- False negative rate:  
-- Calibration / confidence reliability (if applicable):  
+- Firmware version:  
 
-**System metrics:**  
-- End-to-end latency:  
-- Throughput / FPS:  
-- Power consumption:  
-- Memory usage:  
+- Model version or hash:  
 
-**Environmental sensitivity:**  
-Report performance under relevant environmental variables, for example:
-- Lighting conditions:  
-- Distance / range:  
-- Motion blur / speed:  
-- Occlusion:  
-- Background clutter:  
-- Temperature / humidity (if relevant):  
+- Evaluation dataset version:  
 
-**Demographic performance and bias checks (if applicable):**  
-- Groups evaluated:  
-- Disparities observed:  
-- Mitigations / caveats:  
+- Configuration used: (link to config file or list key parameters)  
 
-**Performance over time (maintenance):**  
-- Re-evaluation cadence: (e.g., quarterly, per firmware release)  
-- Re-certification triggers: (what changes require re-evaluation)  
-- Prior versions retained: (where to find them)
+- Environment description: (where tests were run)  
 
----
+**[R] Core Metrics:**  
 
-## 3. Hardware Characteristics
+- Accuracy metrics: (example: precision, recall, F1, mAP, AUROC)  
 
-### 3.1 Hardware Details
-**Device overview:**  
-**Sensor modality:** (camera, IMU, microphone, etc.)  
-**Compute subsystem:** (MCU/CPU/NPU, accelerator)  
-**Memory:**  
-**Power:** (supply requirements, typical draw)  
-**Thermal constraints:**  
-**Mechanical / form factor:**  
+- Latency: (p50, p95)  
 
-### 3.2 Communication Protocols
-**I2C / SPI / UART / USB / Ethernet / Wi-Fi / BLE:**  
-**Protocol details:** (addresses, packet format, timing constraints)  
-**APIs / SDKs:** (links)  
-**Reference drivers:** (links)
+- Throughput or update rate:  
 
-### 3.3 Device Diagrams
-Insert or link diagrams:
-- Block diagram:  
-- Pinout:  
-- Mechanical drawings:  
-- Data flow diagram:
+- Power consumption: (idle, active, peak)  
 
-### 3.4 Bill of Materials (Optional)
-| Component | Manufacturer | Part Number | Notes |
-|---|---|---|---|
-|  |  |  |  |
+- Memory footprint:  
 
-### 3.5 Environmental Impact (Optional but recommended)
-**Materials and manufacturing notes:**  
-**Power and energy usage notes:**  
-**Estimated operational footprint (if available):**  
-**Disposal / recyclability:**  
-**Reporting standard used (if any):**  
+**[R] Environmental Sensitivity Results:**  
 
-### 3.6 Acronyms and Glossary
-**Acronyms:**  
--  
+- Lighting:  
 
-**Glossary:**  
--  
+- Distance and angle:  
+
+- Occlusion and motion:  
+
+- Temperature or other relevant factors:  
+
+**[C] Demographic and Fairness Analysis:**  
+
+- Demographic slices evaluated:  
+
+- Observed disparities:  
+
+- Mitigations or caveats:  
+
+- Not evaluated and why:  
+
+**[R] Failure Modes and Known Limitations:**  
+
+- Common failure cases:  
+
+- Conditions that invalidate outputs:  
+
+- Recommended fallback behavior:  
+
+**[O] Monitoring, Drift, and Diagnostics:**  
+
+- Signals to monitor in deployment:  
+
+- Drift detection approach:  
+
+- Triggers for reevaluation and datasheet update:  
 
 ---
 
-## 4. User Study Materials (Optional)
+## 6. Hardware Characteristics
 
-### 4.1 Study Flyer
-Link or embed.
+**[R] Hardware Overview:**  
 
-### 4.2 Interest Form
-Link or embed.
+**[R] Hardware Revision:**  
 
-### 4.3 Consent Form
-Link or embed.
+**[R] Compute Components:** (MCU, GPU, NPU, accelerator)  
+
+**[R] Sensor Components:** (camera module, microphone, IMU, radar)  
+
+**[R] Memory and Storage:**  
+
+**[R] Power Requirements:** (voltage, current, battery considerations)  
+
+**[R] Thermal Constraints:**  
+
+**[O] Mechanical and Mounting Notes:**  
+
+**[C] Interfaces and Protocols:**  
+
+- I2C details: (if applicable)  
+
+- SPI, UART, USB, WiFi, BLE:  
+
+- Pinout or connector details:  
+
+**[O] Device Diagrams:** (links or embedded images)  
+
+**[O] Bill of Materials:** (major components, optional cost notes)  
 
 ---
 
-## Appendix A. Change Impact Checklist (Recommended)
-When updating this datasheet, check which aspects changed and require re-evaluation.
+## 7. Environmental Impact
 
-- [ ] Hardware revision changed
-- [ ] Firmware / software changed
-- [ ] Model retrained or updated
-- [ ] Dataset changed
-- [ ] Output semantics changed (thresholds, labels, calibration)
-- [ ] End-to-end evaluation updated
-- [ ] Privacy / security controls changed
-- [ ] Certifications affected (notify certifier, re-certify)
+**[R] Operational Energy Use:** (tie back to power metrics)  
+
+**[O] Manufacturing and Materials Notes:** (where known)  
+
+**[O] Packaging and Shipping Notes:**  
+
+**[R] Model Lifecycle Impact:** (retraining frequency, update cadence)  
+
+**[O] End of Life Considerations:** (recycling, disposal guidance)  
 
 ---
 
-## Appendix B. References
-List key references, standards, and links:
--  
+## 8. Maintenance and Release Process
+
+**[R] What Requires a Datasheet Update:**  
+
+- Firmware change  
+
+- Model retraining or fine tuning  
+
+- Training or evaluation dataset update  
+
+- Hardware revision  
+
+- Interface change  
+
+- Security patch  
+
+**[R] Recommended Evaluation Cadence:** (example: every release, quarterly, after any update)  
+
+**[O] Backward Compatibility Notes:**  
+
+**[O] Deprecation Policy:**  
+
+---
+
+## 9. Acronyms and Glossary
+
+**[O] Acronyms:**  
+
+**[O] Glossary:**  
+
+---
+
+## 10. User Study Materials
+*(Include only if applicable. Link to forms rather than embedding sensitive content.)*
+
+**[C] Study Flyer:**  
+
+**[C] Interest Form:**  
+
+**[C] Consent Form:**  
+
+**[C] IRB or Ethics Reference:**  
